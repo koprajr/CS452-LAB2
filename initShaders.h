@@ -111,7 +111,7 @@ GLuint createProgram(const vector<GLuint> shadeList){
   for(GLuint i=0;i<shadeList.size();i++){glAttachShader(program,shadeList[i]);}//attaches shaders to program
   
   glBindAttribLocation(program, 0, "in_position");//binds the location an attribute to a program
-  glBindAttribLocation(program, 0, "in_color");//binds the location an attribute to a program
+  glBindAttribLocation(program, 1, "in_color");//binds the location an attribute to a program
   glLinkProgram(program);//links program to your program //weird
   
   GLint linkStatus;//status for linking variable

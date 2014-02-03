@@ -4,23 +4,37 @@ int counter=0;//counter to increase how many vertices are going to be drawn at a
 
 GLuint vaoID, vboID[2];//vao and vbo names
 
-GLfloat vertexarray[]={0.5f,0.5f,0.0f,//vertice array
-			1.0f,0.0f,0.0f,
-                       0.5f,-0.5f,0.0f, 
-                       0.0f,-1.0f,0.0f,
-                       -0.5f,-0.5f,0.0f, 
+GLfloat vertexarray[]={	0.5f,0.5f,0.0f,//vertice array
+					0.75f,0.25f,0.0f,
+				1.0f,0.0f,0.0f,
+					0.75f,-0.25f,0.0f,
+                       	0.5f,-0.5f,0.0f, 
+                       		0.25f,-0.75f,0.0f,
+                       	0.0f,-1.0f,0.0f,
+                       		-0.25f,-0.75f,0.0f,
+                       	-0.5f,-0.5f,0.0f, 
+                       		-0.75f,-0.25f,0.0f,
                         -1.0f,0.0f,0.0f,
-                       -0.5f,0.5f,0.0f,
+                        	-0.75f,0.25f,0.0f,
+                       	-0.5f,0.5f,0.0f,
+                       		-0.25f,0.75f,0.0f,
                       	0.0f,1.0f,0.0f
-                       };
+                      };
                        
-GLfloat colorarray[]={1.0f,1.0f,0.0f,1.0f,//color array
+GLfloat colorarray[]={ 1.0f,1.0f,0.0f,1.0f,//color array
+			     		1.0f,1.0f,0.0f,1.0f,
                        0.0f,1.0f,0.0f,1.0f,
+                       		1.0f,1.0f,0.0f,1.0f,
                        1.0f,0.0f,1.0f,1.0f,
+                       		1.0f,1.0f,0.0f,1.0f,
                        0.5f,0.5f,1.0f,1.0f,
+                       		1.0f,1.0f,0.0f,1.0f,
                        1.0f,0.5f,0.5f,1.0f,
+                       		1.0f,1.0f,0.0f,1.0f,
                        0.0f,1.0f,0.5f,1.0f,
+                       		1.0f,1.0f,0.0f,1.0f,
                        0.5f,0.5f,0.5f,1.0f,
+                       		1.0f,1.0f,0.0f,1.0f,
                        1.0f,0.5f,1.0f,1.0f
                        };                       
 
@@ -52,7 +66,7 @@ void init(){
 
 void drawscene(){
   glClear(GL_COLOR_BUFFER_BIT);
-  glDrawArrays(GL_POLYGON,0,3+(counter%6));
+  glDrawArrays(GL_POLYGON,0,3+(counter%13));
   glFlush();
 }
 
