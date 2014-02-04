@@ -1,7 +1,5 @@
 CS452-LAB2
 ==========
+Jeffrey Kopra - 0231864
 
-Lab due Tuesday Feb 4.
-
-Use VAO's and VBO's to draw shapes.
-If you use glBegin and glEnd to draw shapes you will lose points.
+I used VAO's and VBO's to draw shapes instead of using glBegin and glEnd.

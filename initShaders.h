@@ -34,7 +34,6 @@ void initShaders(ShaderInfo* shaders){
   }
   
   GLuint program=createProgram(Shadelist);//creates the program linking to all the shaders
-  
   glUseProgram(program);//installs a program object as part of current rendering state
 }
 
@@ -53,11 +52,9 @@ const GLchar* inputShader(const char* filename){
   long filesize=ftell(fshade);
   fseek(fshade, 0, SEEK_SET);
   
-  
   //allocates memory for the file and read in the file 
   GLchar* shadingSource= new GLchar[filesize+1];//
   fread(shadingSource, 1, filesize, fshade);
-  
   
   if(ftell(fshade) == 0){//checks to see if the file is empty
     fprintf(stderr, "File '%s' is empty.\n",filename);
@@ -126,7 +123,7 @@ GLuint createProgram(const vector<GLuint> shadeList){
     
     fprintf(stderr,"\nShader linking failed: %s\n",infoLog);//prints your linking failed
     delete[] infoLog;//memory management
-    
+
     for(GLuint i=0;i<shadeList.size();i++){glDeleteShader(shadeList[i]);}//memory management
   }
   return program;//self explanatory
