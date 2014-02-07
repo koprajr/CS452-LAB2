@@ -15,8 +15,8 @@ extern "C" {
 
 //----------------------------------------------------------------------------
 //
-//  LoadShaders() takes an array of ShaderFile structures, each of which
-//    contains the type of the shader, and a pointer a C-style character
+//  The LoadShaders functions takes an array of ShaderFile structures, each of
+//    which contains the type of the shader, and a pointer a C-style character
 //    string (i.e., a NULL-terminated array of characters) containing the
 //    entire shader source.
 //
